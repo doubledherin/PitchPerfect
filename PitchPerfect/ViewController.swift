@@ -20,12 +20,18 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(<#T##animated: Bool##Bool#>)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(<#T##animated: Bool##Bool#>)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var stopRecordingButton: UIButton!
     @IBAction func recordAudio(_ sender: Any) {
         print("Record button pressed.")
         recordingLabel.text = "Recording in progress"
