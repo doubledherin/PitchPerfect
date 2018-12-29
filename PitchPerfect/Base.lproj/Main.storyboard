@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D90-mJ-bFU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record Sounds View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqc-da-sKm">
-                                <rect key="frame" x="78" y="428.5" width="219" height="21"/>
+                                <rect key="frame" x="63" y="420" width="248" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,23 +47,58 @@
                         <constraints>
                             <constraint firstItem="0DI-Vy-nIH" firstAttribute="centerX" secondItem="oSQ-OS-uL4" secondAttribute="centerX" id="Lrc-l1-PyS"/>
                             <constraint firstItem="0DI-Vy-nIH" firstAttribute="top" secondItem="oSQ-OS-uL4" secondAttribute="bottom" constant="46.5" id="LsP-hj-Y1L"/>
-                            <constraint firstItem="yqc-da-sKm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="Qz4-f1-1Nv"/>
-                            <constraint firstItem="0DI-Vy-nIH" firstAttribute="top" secondItem="yqc-da-sKm" secondAttribute="bottom" constant="8" symbolic="YES" id="gRi-ds-3ON"/>
+                            <constraint firstItem="yqc-da-sKm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="Qz4-f1-1Nv"/>
+                            <constraint firstItem="0DI-Vy-nIH" firstAttribute="top" secondItem="yqc-da-sKm" secondAttribute="bottom" constant="16.5" id="gRi-ds-3ON"/>
                             <constraint firstItem="yqc-da-sKm" firstAttribute="centerX" secondItem="0DI-Vy-nIH" secondAttribute="centerX" id="kbr-24-GPR"/>
                             <constraint firstItem="oSQ-OS-uL4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qvC-NE-d6K"/>
                             <constraint firstItem="oSQ-OS-uL4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="trG-ks-mxb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9sk-8V-73F"/>
                     <connections>
                         <outlet property="recordButton" destination="oSQ-OS-uL4" id="xoD-uc-yQp"/>
                         <outlet property="recordingLabel" destination="yqc-da-sKm" id="e7S-gB-yh8"/>
                         <outlet property="stopRecordingButton" destination="0DI-Vy-nIH" id="1vt-4r-BBO"/>
+                        <segue destination="Pm2-wv-8nL" kind="show" identifier="stopRecording" id="CcF-6W-jiB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+            <point key="canvasLocation" x="1102" y="0.0"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Eyt-VO-fsn">
+            <objects>
+                <viewController id="Pm2-wv-8nL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s1X-Oe-CG4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.27928580086155275" green="1" blue="0.9848837277928677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="2Bk-uo-kk7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bum-fE-3XX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RAR-RB-lIo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D90-mJ-bFU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jJb-kA-jww">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yGG-w5-S8j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vg7-B0-SQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="0.0"/>
         </scene>
     </scenes>
     <resources>
