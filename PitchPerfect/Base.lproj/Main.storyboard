@@ -125,7 +125,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7m-LK-5AA" userLabel="Stop Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7m-LK-5AA" userLabel="Stop Button">
                                 <rect key="frame" x="155.5" y="589" width="64" height="64"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <constraints>
@@ -139,12 +139,20 @@
                         <constraints>
                             <constraint firstItem="Z7m-LK-5AA" firstAttribute="centerX" secondItem="s1X-Oe-CG4" secondAttribute="centerX" id="He8-cc-bOi"/>
                             <constraint firstItem="wAL-Sk-KmG" firstAttribute="top" secondItem="1V7-qP-ivm" secondAttribute="bottom" id="PtG-OS-bnv"/>
-                            <constraint firstItem="UF1-3P-NEf" firstAttribute="top" secondItem="Z7m-LK-5AA" secondAttribute="bottom" constant="20" id="Zx3-RT-UqS"/>
-                            <constraint firstItem="Z7m-LK-5AA" firstAttribute="top" secondItem="wAL-Sk-KmG" secondAttribute="bottom" constant="-20" id="l1F-72-Ebd"/>
+                            <constraint firstItem="UF1-3P-NEf" firstAttribute="top" secondItem="Z7m-LK-5AA" secondAttribute="bottom" constant="14" id="Zx3-RT-UqS"/>
+                            <constraint firstItem="Z7m-LK-5AA" firstAttribute="top" secondItem="wAL-Sk-KmG" secondAttribute="bottom" constant="-14" id="l1F-72-Ebd"/>
                             <constraint firstItem="wAL-Sk-KmG" firstAttribute="leading" secondItem="s1X-Oe-CG4" secondAttribute="leading" constant="30" id="r6U-78-E9q"/>
                             <constraint firstAttribute="trailing" secondItem="wAL-Sk-KmG" secondAttribute="trailing" constant="30" id="wyE-dA-Lpx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="echoButton" destination="m1b-zZ-vY2" id="OnA-Yk-4eL"/>
+                        <outlet property="fastButton" destination="BbR-I7-GNi" id="MhN-Hz-Y95"/>
+                        <outlet property="highPitchButton" destination="aDA-A2-xSq" id="j6v-6f-e2k"/>
+                        <outlet property="lowPitchButton" destination="pqD-8O-ZAj" id="3lT-SK-RDA"/>
+                        <outlet property="reverbButton" destination="4bI-QY-Dvp" id="YRx-SA-eH3"/>
+                        <outlet property="slowButton" destination="kJF-1k-NJU" id="5YJ-sV-jpB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bum-fE-3XX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,20 +175,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vg7-B0-SQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="398" y="0.0"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="nG8-7J-zYn">
-            <objects>
-                <viewControllerPlaceholder id="19Y-7L-q3S" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1x5-2u-aDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="UvI-cb-ohe">
-            <objects>
-                <viewControllerPlaceholder id="EZg-ez-Ble" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IyS-pz-p6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
