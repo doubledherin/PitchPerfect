@@ -16,8 +16,17 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var lowPitchButton: UIButton!
     @IBOutlet weak var echoButton: UIButton!
     @IBOutlet weak var reverbButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     
     var recordedAudioUrl: URL!
+    
+    @IBAction func handlePlay(_ sender: UIButton) {
+        print("play button pressed")
+    }
+    
+    @IBAction func handleStop(_sender: AnyObject) {
+        print("stop button pressed")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
