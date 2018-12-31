@@ -71,7 +71,7 @@
         <scene sceneID="Eyt-VO-fsn">
             <objects>
                 <viewController id="Pm2-wv-8nL" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="s1X-Oe-CG4" customClass="PlaySoundsVi">
+                    <view key="view" contentMode="scaleToFill" id="s1X-Oe-CG4" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.27928580086155275" green="1" blue="0.9848837277928677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
