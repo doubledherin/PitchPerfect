@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 
+// MARK: Play Sounds View Controller
 class PlaySoundsViewController: UIViewController {
 
     @IBOutlet weak var slowButton: UIButton!
@@ -26,6 +27,21 @@ class PlaySoundsViewController: UIViewController {
     var stopTimer: Timer!
     
     enum ButtonType: Int { case slow = 0, fast, highPitch, lowPitch, echo, reverb }
+    
+    // MARK: View lifecycle overrides
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setContentModesForButtons()
+        setupAudio()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureUI(.notPlaying)
+    }
+
+    // MARK: handlePlay action
     
     @IBAction func handlePlay(_ sender: UIButton) {
         switch(ButtonType(rawValue: sender.tag)!) {
@@ -46,16 +62,13 @@ class PlaySoundsViewController: UIViewController {
         configureUI(.playing)
     }
     
+    // MARK: handleStop action
+    
     @IBAction func handleStop(_sender: AnyObject) {
         stopAudio()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setContentModesForButtons()
-        setupAudio()
-    }
-    
+    // MARK: setContentModesForButtons helper
     func setContentModesForButtons() {
         let buttons = [
             slowButton,
@@ -71,11 +84,4 @@ class PlaySoundsViewController: UIViewController {
             button!.imageView?.contentMode = .scaleAspectFit
         }
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        configureUI(.notPlaying)
-    }
-
-
 }
