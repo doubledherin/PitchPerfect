@@ -28,11 +28,26 @@ class PlaySoundsViewController: UIViewController {
     enum ButtonType: Int { case slow = 0, fast, highPitch, lowPitch, echo, reverb }
     
     @IBAction func handlePlay(_ sender: UIButton) {
-        print("play button pressed")
+        switch(ButtonType(rawValue: sender.tag)!) {
+        case .slow:
+            playSound(rate: 0.5)
+        case .fast:
+            playSound(rate: 1.5)
+        case .highPitch:
+            playSound(pitch: 1000)
+        case .lowPitch:
+            playSound(pitch: -1000)
+        case .echo:
+            playSound(echo: true)
+        case .reverb:
+            playSound(reverb: true)
+        }
+        
+        configureUI(.playing)
     }
     
     @IBAction func handleStop(_sender: AnyObject) {
-        print("stop button pressed")
+        stopAudio()
     }
     
     override func viewDidLoad() {
